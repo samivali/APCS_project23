@@ -1,6 +1,5 @@
 package pkg;
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 
 
 public class Trick{
@@ -29,8 +28,12 @@ public class Trick{
         return link;
     }
     
-    public void setAchive(boolean achive){
-        this.achive = achive;
+    public void setAchive(){
+        achive = true;
+    }
+    
+    public boolean getAchive(){
+        return achive;
     }
     
 }
