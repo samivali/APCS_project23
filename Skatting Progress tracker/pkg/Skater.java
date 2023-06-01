@@ -1,7 +1,7 @@
 package pkg;
 import java.util.*;
 
-public class Skater{
+public class Skater extends Sequence{
     Trick [] list = new Trick[11];
     int level;
     ArrayList<Trick> work;
@@ -26,18 +26,26 @@ public class Skater{
         for(int x = 0; x<(work.size()); x++){
             min = min+((work.get(x)).getLevel());
         }
-        System.out.println("Your level is around " + (min/(work.size())) + " on the ISI learning levels");
+        if(min != 0){
+            System.out.println("Your level is around a " + (min/(work.size())) + " on the ISI learning levels");
+            System.out.println("You still need to work on: ");
+        }
+        else{
+            System.out.println("You around an ISI level 5 or 6. Try out this sequence to practice!!");
+            generateSequence();
+        }
+        
         
     }
     
     public void achivements(){
         String check;
         Scanner sc = new Scanner(System.in);
-        System.out.println("type T for all the skills you have");
+        System.out.println("type t for all the skills you have");
         for(int x = 0; x<list.length; x++){
 	        System.out.println(list[x].getName());
 	        check = sc.nextLine();
-	        if(check.equals("T")){
+	        if(check.equals("t")){
 	            list[x].setAchive();
 	        }
         }
@@ -55,4 +63,5 @@ public class Skater{
     public ArrayList<Trick> getProgress(){
         return work;
     }
+    
 }

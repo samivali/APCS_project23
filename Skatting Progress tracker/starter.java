@@ -42,15 +42,14 @@ class starter {
         list [9] = new Trick("Mohawks", "https://youtu.be/8MrF6AxeN1w", 4);
         list [10] = new Trick("One Foot Spin", "https://youtu.be/zyat2c-5MXw", 4);*/
         Skater New  = new Skater();
+        System.out.println("Track your figure skating progress and see what ISI level your at:");
         New.achivements();
         New.inProgress();
-        System.out.println("You still need to work on: ");
+        New.findLevel();
         for(int x = 0; x<(New.getProgress()).size(); x++){
             System.out.println("----------------------------------------------------------");
         	System.out.println(((New.getProgress()).get(x)).getName() + ": watch this and practice: " + (((New.getProgress()).get(x)).getLink()));
         }
-        
-        New.findLevel();
         
 		
 	}

@@ -8,6 +8,13 @@ public class Trick{
     private String link;
     private boolean achive;
     
+    public Trick(String name){
+        this.name = name;
+        level = 0;
+        link = "";
+        achive = true;
+    }
+    
     
     public Trick(String name, String link, int level){
         this.name = name;
